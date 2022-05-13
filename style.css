@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+/* Josh's Custom CSS Reset
+ https: //www.joshwcomeau.com/css/custom-css-reset/
+*/
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+p {
+    line-height: 1.5;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+:root {
+    --primary-orange: hsl(25, 97%, 53%);
+    --neutral-white: hsl(0, 0%, 100%);
+    --neutral-light-grey: hsl(217, 12%, 63%);
+    --neutral-medium-grey: hsl(216, 12%, 54%);
+    --neutral-dark-blue: hsl(213, 19%, 18%);
+    --neutral-grey-blue: hsl(213, 15%, 19%);
+    --neutral-very-dark-blue: hsl(216, 12%, 8%);
+    --neutral-extra-dark-blue: hsl(216, 5%, 4%);
+    --body-font-size: 0.938rem;
+}
+
+html {
+    background-color: var(--neutral-extra-dark-blue);
+}
+
+body {
+    font-family: 'Overpass', sans-serif;
+}
+
+.attribution {
+    color: var(--neutral-light-grey);
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 60%);
+}
+
+.container {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.card {
+    background: linear-gradient(var(--neutral-dark-blue), var(--neutral-very-dark-blue));
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    padding: 25px;
+    width: 300px;
+}
+
+.card_icon {
+    background-color: var(--neutral-grey-blue);
+    border-radius: 50%;
+    margin-bottom: 20px;
+    padding: 10px;
+    height: 40px;
+    width: 40px;
+}
+
+div.card_icon svg {
+    margin-left: 2px;
+    margin-top: 2px;
+}
+
+.button {
+    background: var(--primary-orange);
+    color: var(--neutral-white);
+    cursor: pointer;
+    display: block;
+    border-radius: 20px;
+    border-style: none;
+    padding: 7px;
+    text-transform: uppercase;
+    min-width: 100%;
+    margin-top: 10px;
+}
+
+.button:hover {
+    background-color: var(--neutral-white);
+    color: var(--primary-orange);
+}
+
+.heading {
+    color: var(--neutral-white);
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+}
+
+.text-body {
+    color: var(--neutral-medium-grey);
+    font-size: var(--body-font-size);
+    margin-bottom: 20px;
+}
+
+.form-control {
+    max-width: 100%;
+}
+
+.rating-container {
+    display: flex;
+    justify-content: space-between;
+    min-width: 100%;
+    margin-bottom: 20px;
+}
+
+.rating-container label {
+    position: relative;
+}
+
+.rating {
+    appearance: none;
+    background-color: var(--neutral-dark-blue);
+    border-radius: 100%;
+    border-style: none;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    position: relative;
+}
+
+.rating+span {
+    cursor: pointer;
+    color: var(--neutral-medium-grey);
+    position: absolute;
+    top: 11px;
+    left: 16px;
+}
+
+.rating:last-child {
+    margin-right: 0;
+}
+
+.rating:checked {
+    background-color: var(--neutral-light-grey);
+}
+
+.rating:checked+span {
+    color: var(--neutral-white);
+}
+
+.rating:hover {
+    background-color: var(--primary-orange);
+}
+
+.rating:hover+span {
+    color: var(--neutral-white);
+}
+
+.rating input[type='radio'] {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+
+.rate_result {
+    display: none;
+    background-color: var(--neutral-dark-blue);
+    color: var(--primary-orange);
+    text-align: center;
+    padding: 5px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    width: 190px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-device-width: 1200px) {
+    .container {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .card {
+        width: 370px;
+    }
+}
