@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- [Solution](https://your-solution-url.com)
-- [Add live site URL here](https://your-live-site-url.com)
+- [Solution](https://www.frontendmentor.io/solutions/mobilefriendly-interactive-rating-component-ByzkmX2Ic)
+- [Live Demo](https://sj0n.github.io/interactive_rating_component/)
 
 <br>
 
